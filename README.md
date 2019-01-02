@@ -1,2 +1,0 @@
-# Seudobook
-Created with CodeSandbox

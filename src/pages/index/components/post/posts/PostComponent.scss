@@ -1,0 +1,34 @@
+#post-container {
+  background-color: #f1f1f1;
+  padding: 10px 14px;
+
+  #post-header {
+    height: 48px;
+    padding: 8px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 48px auto;
+
+    #post-left-content {
+      #author-avatar {
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+    }
+
+    #post-right-content {
+      #author-name {
+        margin: 0;
+      }
+
+      #book-title {
+        background-color: #128cff;
+        color: white;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+    }
+  }
+}

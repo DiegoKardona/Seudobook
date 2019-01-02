@@ -1,0 +1,81 @@
+#new-post {
+  background-color: #f1f1f1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin: 8px 140px;
+
+  #book-info {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background: white;
+    padding: 10px;
+    border-right: 2px solid #ccc;
+
+    #book-title {
+      #title-input {
+        padding: 2px 4px;
+        font-weight: bold;
+      }
+    }
+
+    #book-cover {
+      position: relative;
+      #cover-img {
+        margin-top: 10px;
+        width: 180px;
+        height: 270px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: none;
+        background-color: grey;
+      }
+
+      #cover-progress {
+        display: block;
+        width: 100%;
+        margin: 4px 0;
+      }
+
+      #input-container {
+        position: relative;
+        background-color: #128cff;
+        padding: 2px 4px;
+        color: white;
+        text-align: center;
+        overflow: hidden;
+
+        #cover-input {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  #post-content {
+    padding: 0 10px;
+
+    #content-input {
+      padding: 2px 4px;
+      width: 100%;
+      min-height: 60%;
+      resize: none;
+    }
+
+    #post-button {
+      background: linear-gradient(#4ecc44, #3da735);
+      color: white;
+      padding: 4px 10px;
+      font-weight: bold;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+}

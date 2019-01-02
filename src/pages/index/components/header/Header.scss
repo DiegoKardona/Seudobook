@@ -1,0 +1,83 @@
+#header {
+  background: linear-gradient(to right, #0b75d8, #128cff);
+  border-bottom: 2px solid #084e8f;
+  color: #fff;
+  padding: 10px 0;
+  padding-right: 205px;
+  display: flex;
+  justify-content: space-between;
+  max-height: 30px;
+
+  #left-content {
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    margin-left: 14px;
+
+    #brand {
+      background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/tjBuxcd0g0m.png);
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: 0 -442px;
+      height: 24px;
+      outline: none;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 24px;
+      margin: 0 10px;
+    }
+
+    #search-box {
+      width: 34vw;
+
+      #search-form {
+        display: grid;
+        grid-template-columns: 100% auto;
+
+        #search-input {
+          height: 20px;
+          width: 100%;
+          font-size: 0.8em;
+        }
+
+        #search-button {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  #right-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #profile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      #user-avatar {
+        width: 24px;
+        border-radius: 50%;
+      }
+
+      #user-name {
+        font-weight: bold;
+        margin: 0 4px;
+      }
+    }
+
+    #navigation {
+      #logout-button {
+        background: linear-gradient(#4ecc44, #3da735);
+        color: white;
+        padding: 4px 10px;
+        font-weight: bold;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    }
+  }
+}

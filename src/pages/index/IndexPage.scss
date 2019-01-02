@@ -1,0 +1,14 @@
+#main-content {
+  display: grid;
+  grid-template-columns: 20% auto;
+
+  #left-content {
+    padding: 8px 10px;
+    background: #128cff;
+    color: white;
+  }
+
+  #right-content {
+    padding: 8px 10px;
+  }
+}

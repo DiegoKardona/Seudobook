@@ -1,0 +1,71 @@
+#section {
+  padding: 10px 142px;
+  background: linear-gradient(white, #e8eaf3);
+  height: 60vh;
+
+  #section-container {
+    display: flex;
+    justify-content: space-between;
+
+    #left-content {
+      width: 50%;
+      margin-right: 10vh;
+
+      h3 {
+        max-width: 86%;
+      }
+
+      #principal-img {
+        width: 530px;
+        height: 200px;
+      }
+    }
+
+    #right-content {
+      max-width: 50%;
+
+      h3 {
+        font-weight: normal;
+      }
+
+      /*Register form*/
+      #register-form {
+        #personal-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          #firstname-input,
+          #lastname-input {
+            padding: 8px 6px;
+            margin-right: 10px;
+            font-size: 1em;
+            margin-bottom: 8px;
+          }
+        }
+
+        #account-info {
+          max-width: 416px;
+          #email-input,
+          #password-input {
+            padding: 8px 6px;
+            width: 100%;
+            font-size: 1em;
+            margin-bottom: 8px;
+          }
+        }
+
+        #register-button {
+          margin-top: 14px;
+          display: block;
+          background: linear-gradient(#0fb211, #0c830e);
+          border: none;
+          border-radius: 6px;
+          padding: 10px 50px;
+          font-size: 1.2em;
+          color: white;
+        }
+      }
+    }
+  }
+}
