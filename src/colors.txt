@@ -1,0 +1,9 @@
+primary: 0B75D8
+
+primary - dark: 128CFF
+
+primary - light: 349DFFl
+
+light: FFFFFF
+
+secondary: 4ECC44

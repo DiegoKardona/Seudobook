@@ -14,25 +14,6 @@ class HandlePost extends PureComponent {
     post: ""
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
-    const database = firebase.firestore().collection("posts");
-
-    //Adding new post
-    database
-      .add({
-        bookTitle: this.state.bookTitle,
-        bookCover: this.state.bookCover,
-        post: this.state.post
-      })
-      .then(() => {
-        alert("Post publicadó con exito!");
-      })
-      .catch(error => {
-        alert("Ocurrió un error: ", error);
-      });
-  };
-
   handleChange = e => {
     this.setState({ ...this.state, [e.target.name]: e.target.value });
   };
@@ -61,6 +42,35 @@ class HandlePost extends PureComponent {
         });
       }
     );
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+
+    const database = firebase.firestore().collection("posts");
+    const data = this.state;
+    const currentUser = firebase.auth().currentUser;
+    const userName = currentUser.displayName;
+    const userPhoto = currentUser.photoURL;
+    if (data.bookCover) {
+      //Adding new post
+      database
+        .add({
+          bookTitle: data.bookTitle,
+          bookCover: data.bookCover,
+          post: data.post,
+          postAuthor: userName,
+          postAuthorPhoto: userPhoto
+        })
+        .then(() => {
+          alert("Post publicadó con exito!");
+        })
+        .catch(error => {
+          alert("Ocurrió un error: ", error);
+        });
+    } else {
+      alert("Porfavor elije la portada del libro");
+    }
   };
 
   render() {

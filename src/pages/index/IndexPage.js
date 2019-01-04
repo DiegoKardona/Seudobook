@@ -2,13 +2,12 @@ import React, { Component } from "react";
 
 import "./IndexPage.scss";
 
-//Handle header control the header component
+//Handle header controls the header component
 import Header from "./containers/HandleHeader";
-//Handle post control the newpost component
+//Handle post controls the newpost component
 import NewPost from "./containers/handlePost/HandlePost";
-
-/*Importing components*/
-import PrintPosts from "./components/post/posts/PrintPosts";
+//Handle print posts controls the printPost component
+import PrintPosts from "./containers/handlePrintPosts/HandlePrintPosts";
 
 class IndexPage extends Component {
   render() {
@@ -22,7 +21,11 @@ class IndexPage extends Component {
           <div id="right-content">
             <section id="post-section">
               <NewPost />
-              <PrintPosts />
+              <div id="posts">
+                <div id="posts-container">
+                  <PrintPosts />
+                </div>
+              </div>
             </section>
           </div>
         </div>

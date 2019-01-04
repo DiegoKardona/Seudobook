@@ -2,13 +2,13 @@ import React, { PureComponent } from "react";
 
 import "./LoginForm.scss";
 
+/*Importing firebase*/
 import firebase from "firebase";
 
 class LoginForm extends PureComponent {
   state = {
     email: "",
-    password: "",
-    error: ""
+    password: ""
   };
 
   handleChange = e => {

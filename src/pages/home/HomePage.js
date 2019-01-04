@@ -9,27 +9,17 @@ import LoginPage from "../login/LoginPage";
 
 class HomePage extends Component {
   state = {
-    email: ""
+    logged: false
   };
 
   componentWillMount() {
-    this.handleRenderPage();
+    firebase.auth().onAuthStateChanged(user => {
+      user ? this.setState({ logged: true }) : this.setState({ logged: false });
+    });
   }
 
-  handleRenderPage = () => {
-    firebase.auth().onAuthStateChanged(user => {
-      if (user != null) {
-        this.setState({ email: user.email });
-      }
-    });
-  };
-
   render() {
-    return (
-      <div>
-        {this.state.email ? <IndexPage state={this.state} /> : <LoginPage />}
-      </div>
-    );
+    return <div>{this.state.logged ? <IndexPage /> : <LoginPage />}</div>;
   }
 }
 

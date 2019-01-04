@@ -1,34 +1,55 @@
-#post-container {
-  background-color: #f1f1f1;
-  padding: 10px 14px;
+.post-container {
+  border: 2px solid #ccc;
+  overflow: hidden;
+  border-radius: 8px;
+  width: 70%;
+  margin: 0 auto;
 
-  #post-header {
+  .post-header {
     height: 48px;
     padding: 8px;
     background-color: white;
     display: grid;
     grid-template-columns: 48px auto;
+    border-bottom: 4px solid #ccc;
 
-    #post-left-content {
-      #author-avatar {
+    .post-left-content {
+      .author-avatar {
         width: 40px;
         border-radius: 50%;
         margin-right: 8px;
       }
     }
 
-    #post-right-content {
-      #author-name {
+    .post-right-content {
+      .author-name {
         margin: 0;
       }
 
-      #book-title {
+      .book-title {
         background-color: #128cff;
         color: white;
         padding: 2px 4px;
         border-radius: 4px;
         font-weight: bold;
       }
+    }
+  }
+
+  .post-body {
+    padding: 8px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    .cover-img {
+      width: 180px;
+      height: 270px;
+      margin-right: 8px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: none;
+      background-color: grey;
     }
   }
 }

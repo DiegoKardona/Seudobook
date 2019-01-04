@@ -9,6 +9,13 @@
   }
 
   #right-content {
-    padding: 8px 10px;
+    #posts {
+      background-color: #efefef;
+      color: #333;
+
+      #posts-container {
+        padding: 8px 10px;
+      }
+    }
   }
 }

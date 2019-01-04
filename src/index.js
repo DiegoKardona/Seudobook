@@ -3,8 +3,9 @@ import { render } from "react-dom";
 
 import "./styles.scss";
 
-/*Importing firebase*/
-import firebase from "./firebase";
+/*Importing Redux*/
+import store from "./store.js";
+import { Provider } from "react-redux";
 
 /*Importing react router*/
 import { Switch, Route, BrowserRouter } from "react-router-dom";
@@ -22,8 +23,10 @@ function App() {
 
 const rootElement = document.getElementById("root");
 render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
   rootElement
 );

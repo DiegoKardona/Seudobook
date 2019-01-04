@@ -18,7 +18,7 @@ function NewPost(props) {
           </div>
           <div id="book-cover">
             <div
-              id="cover-img"
+              class="cover-img"
               style={{ backgroundImage: `url("${props.state.bookCover}")` }}
             />
             <progress
